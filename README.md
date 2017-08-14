@@ -3,11 +3,12 @@
 [![Build Status](https://travis-ci.org/naturalatlas/tilestrata-mapnik.svg)](https://travis-ci.org/naturalatlas/tilestrata-mapnik)
 [![Coverage Status](http://img.shields.io/coveralls/naturalatlas/tilestrata-mapnik/master.svg?style=flat)](https://coveralls.io/r/naturalatlas/tilestrata-mapnik)
 
-A [TileStrata](https://github.com/naturalatlas/tilestrata) plugin for rendering tiles with [mapnik](http://mapnik.org/). This package will use the latest version of [node-mbtiles](https://github.com/mapbox/node-mbtiles), unless it's already in your dependency tree (which allows you to pin it to a version if needed).
+A [TileStrata](https://github.com/naturalatlas/tilestrata) plugin for rendering tiles with [mbtiles](http://mapbox.com/). This package will use the latest version of [node-mbtiles](https://github.com/mapbox/node-mbtiles), unless it's already in your dependency tree (which allows you to pin it to a version if needed).
 
 #```sh
-#$ npm install tilestrata-mbtiles --save
 #```
+#$ npm install tilestrata-mbtiles --save
+
 
 ### Sample Usage
 
