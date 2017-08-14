@@ -1,31 +1,25 @@
-# tilestrata-mapnik
+# tilestrata-mbtiles
 [![NPM version](http://img.shields.io/npm/v/tilestrata-mapnik.svg?style=flat)](https://www.npmjs.org/package/tilestrata-mapnik)
 [![Build Status](https://travis-ci.org/naturalatlas/tilestrata-mapnik.svg)](https://travis-ci.org/naturalatlas/tilestrata-mapnik)
 [![Coverage Status](http://img.shields.io/coveralls/naturalatlas/tilestrata-mapnik/master.svg?style=flat)](https://coveralls.io/r/naturalatlas/tilestrata-mapnik)
 
-A [TileStrata](https://github.com/naturalatlas/tilestrata) plugin for rendering tiles with [mapnik](http://mapnik.org/). This package will use the latest version of [node-mapnik](https://github.com/mapnik/node-mapnik), unless it's already in your dependency tree (which allows you to pin it to a version if needed).
+A [TileStrata](https://github.com/naturalatlas/tilestrata) plugin for rendering tiles with [mapnik](http://mapnik.org/). This package will use the latest version of [node-mbtiles](https://github.com/mapbox/node-mbtiles), unless it's already in your dependency tree (which allows you to pin it to a version if needed).
 
-```sh
-$ npm install tilestrata-mapnik --save
-```
+#```sh
+#$ npm install tilestrata-mbtiles --save
+#```
 
 ### Sample Usage
 
 ```js
-var mapnik = require('tilestrata-mapnik');
+var mbtiles = require('tilestrata-mbtiles');
 
 server.layer('mylayer')
-    .route('tile.png').use(mapnik({
-        pathname: '/path/to/map.xml',
+    .route('tile.png').use(mbtiles({
+        pathname: '/path/to/map.mbtiles',
         scale: 1,
         tileSize: 256
-    })
-    .route('tile.json').use(mapnik({
-        xml: 'string of mapnik xml',
-        scale: 1,
-        tileSize: 256,
-        interactivity: true
-    }));
+    });
 ```
 
 ## Contributing
