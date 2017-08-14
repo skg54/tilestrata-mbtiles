@@ -1,6 +1,6 @@
 {
   "name": "tilestrata-mbtiles",
-  "version": "0.4.2",
+  "version": "0.0.2",
   "description": "A TileStrata plugin for rendering tiles with mbtiles",
   "author": "Sam Gregory <sgregory@fishhawk.io>",
   "license": "Apache-2.0",

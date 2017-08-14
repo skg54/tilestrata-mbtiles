@@ -4,7 +4,6 @@ var MBTiles = require('@mapbox/mbtiles');
 module.exports = function(options) {
 	options = _.defaults(options, {
 		interactivity: false,
-		xml: null,
 		metatile: 2,
 		resolution: 4,
 		bufferSize: 128,
@@ -15,7 +14,7 @@ module.exports = function(options) {
 	var source;
 
 	/**
-	 * Initializes the mapnik datasource.
+	 * Initializes the mbtiles datasource.
 	 *
 	 * @param {TileServer} server
 	 * @param {function} callback(err, fn)
@@ -26,10 +25,6 @@ module.exports = function(options) {
 		if (uri.query.pathname) {
 			uri.pathname = uri.query.pathname;
 			delete uri.query.pathname;
-		}
-		if (uri.query.xml) {
-			uri.xml = uri.query.xml;
-			delete uri.query.xml;
 		}
 		new MBTiles(uri, function(err, result) {
 			source = result;
@@ -71,7 +66,7 @@ module.exports = function(options) {
 	}
 
 	return {
-		name: 'mapnik',
+		name: 'mbtiles',
 		init: initialize,
 		serve: options.interactivity ? serveGrid : serveImage
 	};
